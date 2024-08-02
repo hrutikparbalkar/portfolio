@@ -10,9 +10,13 @@ const Bar = () => {
     console.log(to);
   };
 
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className=" sticky z-10 top-0">
-      <div className="relative text-white  w-full p-8  bg-gray-700  md:flex  md:justify-between md:place-content-center gap-40">
+      <div className="relative text-white  w-full p-4 lg:p-6  bg-gray-700  md:flex  md:justify-between md:place-content-center gap-40">
         <div className=' md:flex items-center'>
           <h1 className=" animate__animated animate__backInLeft animate__slow	1s font-bold text-xl text-center md:text-left md:text-xl">Hrutik Parbalkar</h1>
         </div>
@@ -27,19 +31,19 @@ const Bar = () => {
               mobileMenuOpen ? 'top-40 opacity-100' : 'top-[-490px] opacity-100 animate__animated animate__fadeInUp animate__slow	4s'
             } ${mobileMenuOpen ? '' : 'hidden'}`}
           >
-            <Link activeClass="active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="home" spy={true} smooth={true} offset={-240} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Home
             </li></Link>
-            <Link activeClass="active" to="about" spy={true} smooth={true} offset={0} duration={500} onSetActive={handleSetActive}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-190} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               About
             </li></Link>
-            <Link activeClass="active" to="skill" spy={true} smooth={true} offset={-230} duration={500} onSetActive={handleSetActive}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="skill" spy={true} smooth={true} offset={-400} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Skills
             </li></Link>
-            <Link activeClass="active" to="project" spy={true} smooth={true} offset={-250} duration={500} onSetActive={handleSetActive}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="project" spy={true} smooth={true} offset={-390} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Projects
             </li></Link>
-            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={950} duration={500} onSetActive={handleSetActive}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={950} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Contact
             </li></Link>
           </ul>
