@@ -34,13 +34,13 @@ const Bar = () => {
             <Link activeClass="active" to="home" spy={true} smooth={true} offset={-240} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Home
             </li></Link>
-            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-190} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-210} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               About
             </li></Link>
-            <Link activeClass="active" to="skill" spy={true} smooth={true} offset={-400} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="skill" spy={true} smooth={true} offset={-500} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Skills
             </li></Link>
-            <Link activeClass="active" to="project" spy={true} smooth={true} offset={-390} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
+            <Link activeClass="active" to="project" spy={true} smooth={true} offset={-360} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>
               Projects
             </li></Link>
             <Link activeClass="active" to="contact" spy={true} smooth={true} offset={950} duration={500} onSetActive={handleSetActive} onClick={handleLinkClick}><li className='pt-2 md:border-b-2 md:border-b-gray-900 hover:border-b-white duration-100 delay-100'>

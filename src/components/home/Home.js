@@ -13,7 +13,7 @@ const Home = () => {
   })
   return (
     <div className='' id='home' >
-      <div className='  bg-slate-900 lg:py-16 lg:flex lg:justify-between lg:px-28 md:flex md:py-10 md:px-20 md:justify-between  '>
+      <div className='  bg-slate-900 lg:py-16 lg:flex lg:justify-between lg:px-28 md:flex md:py-10 md:px-20 md:justify-between md:gap-5  '>
         <div className='  lg:pt-28 pt-10 w-full'>
           <h2 className='  md:text-4xl text-lg  text-white/50 font-semibold font-serif l:pb-5 text-center lg:text-left md:text-center'>Hello Everyone,</h2>
           <div className=' w-full lg:w-full md:mt-5 grid place-content-center lg:flex lg:place-content-start mt-5'>
@@ -41,7 +41,7 @@ const Home = () => {
           </div>
     
         </div>
-        <div className=' lg:w-[500px]  lg:h-[400px] lg:block rounded-full hidden box md:hidden lg:mt-14 '>
+        <div className=' lg:w-[500px]  lg:h-[400px] lg:block rounded-full mx-auto mt-5 md:w-80 md:h-60   w-60 h-60 box  lg:mt-14 '>
           <img src={hrutik} className=' h-full w-full rounded-full'/>
         </div>
       </div>
