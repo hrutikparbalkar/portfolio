@@ -1,11 +1,33 @@
 import { GitHub, Instagram, LinkedIn,ArrowUpward } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { animateScroll as scroll} from 'react-scroll';
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const [name,setName] = useState('')
+  const [email,setEmail] = useState('')
+  const [message,setMessage] = useState('')
+  const submit=()=>{
+    if (name == "" || email==''|| message==''){
+      Swal.fire({
+        title: "error",
+        text: "Please enter name or email or message",
+        icon: "error"
+      });
+    }
+    else{
+      Swal.fire({
+        title: "Message sent successfully",
+        icon: "success"
+      });      
+    }
+    
+
+  }
+
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -28,10 +50,11 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    onChange={(e)=>setName(e.target.value)}
                     autoComplete="off"
                     id="name"
                     name="name"
-                    class="w-full bg-transparent bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    class="w-full bg-transparent bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -42,10 +65,11 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    onChange={(e)=>setEmail(e.target.value)}
                     autoComplete="off"
                     id="email"
                     name="email"
-                    class="w-full bg-transparent bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    class="w-full bg-transparent bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent  focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -56,14 +80,15 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
+                    onChange={(e)=>setMessage(e.target.value)}
                     autoComplete="off"
                     name="message"
-                    class="w-full bg-transparent bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-white py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    class="w-full bg-transparent bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent  focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-white py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
               </div>
               <div class="p-2 w-full">
-                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                <button onClick={submit} class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                   Submit
                 </button>
               </div>
