@@ -14,7 +14,7 @@ const Skill = () => {
     },
     {
       name: "CSS",
-      img: "https://camo.githubusercontent.com/b9714180de7437a8f4da9f998b998101ce0d73cef3df55b0c0400cecc219e348/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6373732d332e737667",
+      img: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png",
     },
     {
       name: "JS",
