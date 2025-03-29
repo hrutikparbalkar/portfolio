@@ -1,73 +1,63 @@
-import React, { useState,useEffect } from "react";
-import Aos from 'aos';
-import 'aos/dist/aos.css'
-import 'animate.css';
+import React, { useEffect, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Skill = () => {
-  useEffect(()=>{
-    Aos.init({duration:2000,delay:300})
-  })
-  const [data, setData] = useState([
-    {
-      name: "HTML",
-      img: "https://kinsta.com/wp-content/uploads/2021/03/HTML-5-Badge-Logo.png",
-    },
-    {
-      name: "CSS",
-      img: "https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png",
-    },
-    {
-      name: "JS",
-      img: "https://i.pinimg.com/originals/13/40/7c/13407c12f50f08d328800c3caef43f61.png",
-    },
-    {
-      name: "React JS",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAmafdPNr9fd0KC0Z98WYEC7Wl1wYlPVf-A&s",
-    },
-    {
-      name: "Tailwind",
-      img: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632979765809/HTEigfQR-.png?auto=compress,format&format=webp",
-    },
-    {
-      name: "MySQL",
-      img: "https://pipedream.com/s.v0/app_1YMhwo/logo/orig",
-    },
-    {
-      name: "Python",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png",
-    },
-    {
-      name: "Bootstrap",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png",
-    },
-  ]);
+  useEffect(() => {
+    Aos.init({ duration: 2000, delay: 300 });
+  }, []);
+
+  const frontendSkills = [
+    { name: "HTML", img: "https://cdn-icons-png.flaticon.com/512/888/888859.png" },
+    { name: "CSS", img: "https://cdn-icons-png.flaticon.com/512/888/888847.png" },
+    { name: "JavaScript", img: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
+    { name: "Tailwind CSS", img: "https://cdn.hashnode.com/res/hashnode/image/upload/v1632979765809/HTEigfQR-.png?auto=compress,format&format=webp" },
+    { name: "React.js", img: "https://cdn.iconscout.com/icon/free/png-256/react-1-282599.png" }
+  ];
+
+  const backendSkills = [
+    { name: "Node.js", img: "https://cdn-icons-png.flaticon.com/512/919/919825.png" },
+    { name: "Express.js", img: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png" },
+    { name: "MongoDB", img: "https://cdn.iconscout.com/icon/free/png-256/mongodb-5-1175140.png" },
+    { name: "MySQL", img: "https://cdn-icons-png.flaticon.com/512/4299/4299956.png" }
+  ];
+
   return (
-    <div className="  lg:mt-32 mt-10 " id="skill" data-aos="zoom-in">
-      <h1 className=" text-center font-mono text-white lg:text-5xl text-3xl font-semibold">
-        My<span className="  text-red-600 pl-3 lg:pl-5">skills</span>
-      </h1>
-      <section class=" body-font">
-        <div class="container px-5 py-10 lg:py-24 mx-auto">
-          <div class="lg:flex lg:flex-wrap lg:place-content-center lg:gap-20 gap-5 grid grid-cols-2 md:grid-cols-3 " >
-            {data.map((item, i) => {
-              return (
-                <div class="xl:w-1/6 md:w-60 hover:-translate-y-4 duration-700 ease-out transition-all cursor-pointer w-54 lg:w-1/6 p-4" key={i}>
-                  <div class=" p-6 rounded-lg border-2 border-white/50">
-                    <img
-                      class="h-24 md:h-36 lg:h-40 rounded w-full object-cover object-center mb-6"
-                      src={item.img}
-                      alt="content"
-                    />
-                    <h2 class="text-lg text-white font-medium title-font mb-1 text-center">
-                      {item.name}
-                    </h2>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+    <div className="bg-gray-900 text-white py-20" id="skill" data-aos="fade-up">
+      <div className="container mx-auto px-6 lg:px-16">
+        
+        {/* Frontend Section */}
+        <h1 className="text-center text-4xl md:text-5xl font-extrabold mb-12">
+          Frontend <span className="text-red-500">Skills</span>
+        </h1>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 cursor-pointer">
+          {frontendSkills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-lg rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl hover:bg-white/20 duration-500 p-6 flex flex-col items-center justify-center border border-gray-700"
+            >
+              <img src={skill.img} alt={skill.name} className="w-20 h-20 mb-4" />
+              <h3 className="text-lg font-semibold">{skill.name}</h3>
+            </div>
+          ))}
         </div>
-      </section>
+
+        {/* Backend Section */}
+        <h1 className="text-center text-4xl md:text-5xl font-extrabold my-16">
+          Backend <span className="text-blue-500">Skills</span>
+        </h1>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 cursor-pointer">
+          {backendSkills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-lg rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl hover:bg-white/20 duration-500 p-6 flex flex-col items-center justify-center border border-gray-700"
+            >
+              <img src={skill.img} alt={skill.name} className="w-20 h-20 mb-4" />
+              <h3 className="text-lg font-semibold">{skill.name}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
