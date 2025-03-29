@@ -15,13 +15,13 @@ const Home = () => {
     <div className='' id='home' >
       <div className='  bg-slate-900 lg:py-16 lg:flex lg:justify-between lg:px-28 md:flex md:py-10 md:px-20 md:justify-between md:gap-5  '>
         <div className='  lg:pt-28 pt-10 w-full'>
-          <h2 className='  md:text-4xl text-lg  text-white/50 font-semibold font-serif l:pb-5 text-center lg:text-left md:text-center'>Hello Everyone,</h2>
+          <h2 className='  md:text-4xl text-lg  text-white/50 font-semibold font-serif l:pb-5 text-center lg:text-left md:text-center'>Hii</h2>
           <div className=' w-full lg:w-full md:mt-5 grid place-content-center lg:flex lg:place-content-start mt-5'>
             <TypeAnimation
                 sequence={[
                   "I'm Hrutik Parbalkar",
                   1000,
-                  "I'm Web developer",
+                  "I'm Full Stack Developer ",
                   1000,
                  
                 ]}
@@ -37,7 +37,7 @@ const Home = () => {
             <TelegramIcon className=' text-white hover:-translate-y-1 transition-all delay-1000'/>
           </div>
           <div className=' w-full  lg:w-2/3  lg:mt-7 md:p-2 p-4 '>
-            <p className=' text-white font-medium  lg:text-lg md:text-md font-serif text-xs leading-5 whitespace-pre-line text-center md:text-[14px] md:text-left'>As a web developer,I'm passionate about crafting innovative digital solutions that drive user engagement and business growth. With a keen eye for detail and a love for problem-solving.</p>
+            <p className=' text-white font-medium  lg:text-lg md:text-md font-serif text-xs leading-5 whitespace-pre-line text-center md:text-[14px] md:text-left'>Full-Stack Developer with practical experience in developing efficient and responsive web solutions. Proficient in React.js, Node.js, Express.js, MongoDB, and Python, with a keen interest in problem-solving and performance</p>
           </div>
     
         </div>
